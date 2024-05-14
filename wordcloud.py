@@ -2,7 +2,7 @@ import streamlit as st
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
-texto = input("Digite a letra de uma música sem pontuações: ")
+texto = st.text_input("Digite a letra de uma música sem pontuações: ")
 wordcloud = WordCloud(width=800, height=400).generate(texto.lower())
 
 plt.imshow(wordcloud, interpolation='bilinear')
