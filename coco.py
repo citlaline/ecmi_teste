@@ -20,5 +20,10 @@ df['num_rating'] = df['rating'].apply(numeric_rating)
 
 st.title('Distribuição de Ratings do filme Viva! A Vida é uma Festa')
 
-df['num_rating'].plot(kind='hist', bins=20, title='num_rating')
-plt.gca().spines[['top', 'right',]].set_visible(False)
+fig, ax = plt.subplots()
+df['num_rating'].plot(kind='hist', bins=20, ax=ax)
+ax.set_title('Distruibuição Numérica de Ratings - Histograma')
+ax.set_xlabel('Rating')
+ax.set_ylabel('Frequência')
+ax.spines[['top', 'right']].set_visible(False)
+st.pyplot(fig)
