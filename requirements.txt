@@ -1,3 +1,4 @@
 matplotlib 
 wordcloud 
 pandas
+st-gsheets-connection
